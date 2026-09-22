@@ -24,7 +24,7 @@ header b {
 header input {
   width: 220px;
   padding: 7px;
-  background: black;
+  background: gray;
   border: 1px solid gray;
 }
 header nav {
@@ -76,7 +76,7 @@ h2 {
 }
 .repositories {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 15px;
 }
 article {
@@ -99,4 +99,15 @@ article {
   article {
     margin-bottom: 15px;
   }
+}
+
+/* 2번째 카드에 마우스 올리면 배경 이미지*/
+.repositories article:nth-child(2):hover {
+  background: url("https://i.pinimg.com/564x/02/30/f1/0230f1fda437e70a1c6e6dd7424e379d.jpg")
+    no-repeat center / cover;
+  color: white;
+  transition: 0.3s;
+}
+.repositories article:nth-child(2):hover a {
+  color: white;
 }
